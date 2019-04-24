@@ -5,6 +5,7 @@
 nav{
 padding-left: 48px;
 padding-right: 48px;
+height: 72px;
 
   li{
     border-bottom: 1px solid #343a40;
@@ -73,11 +74,28 @@ padding-right: 48px;
 }
 @media screen and (max-width: 980px) {
 
-button.navbar-toggler{
-  order:3;
-}
-  .your-estate{
-      order: 2;
+  button.navbar-toggler {
+    order: 2;
+  }
+  .your-estate {
+    order: 1;
+  }
+  div.navbar-collapse {
+    order: 3;
+
+    ul.navbar-nav{
+      align-items: center;
     }
   }
+}
 
+@media screen and (max-width: 450px) {
+
+  a.img-logo{
+    display: none;
+  }
+  nav{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

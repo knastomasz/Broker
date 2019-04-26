@@ -2,27 +2,27 @@
   z-index: 10000000 !important;
 }
 
-nav{
+nav {
 padding-left: 48px;
 padding-right: 48px;
 
-  a.img-logo{
+  a.img-logo {
     padding: 0px;
   }
 
-  li{
+  li {
     border-bottom: 1px solid #343a40;
 
     &:hover{
       border-bottom: 1px solid white;
     }
 
-    .active-link{
+    .active-link {
       color:white !important;
     }
   }
 
-.your-estate{
+.your-estate {
   position: relative;
   background:-webkit-linear-gradient(top, rgb(214, 167, 36) 0%, rgb(255, 157, 0) 100%);
   color: white;
@@ -30,10 +30,12 @@ padding-right: 48px;
   border-radius: 4px;
   transition: .6s;
   overflow: hidden;
-  &:focus{
+
+  &:focus {
     outline: 0;
   }
-  &:before{
+
+  &:before {
     content: '';
     display: block;
     position: absolute;
@@ -46,7 +48,7 @@ padding-right: 48px;
     filter: blur(30px);
     transform: translateX(-100px)  skewX(-15deg);
   }
-  &:after{
+  &:after {
     content: '';
     display: block;
     position: absolute;
@@ -59,15 +61,15 @@ padding-right: 48px;
     filter: blur(5px);
     transform: translateX(-100px) skewX(-15deg);
   }
-  &:hover{
+  &:hover {
     background: #e3af34;
     cursor: pointer;
-    &:before{
+    &:before {
       transform: translateX(300px)  skewX(-15deg);
       opacity: 0.6;
       transition: .7s;
     }
-    &:after{
+    &:after {
       transform: translateX(300px) skewX(-15deg);
       opacity: 1;
       transition: .7s;
@@ -86,7 +88,7 @@ padding-right: 48px;
   div.navbar-collapse {
     order: 3;
 
-    ul.navbar-nav{
+    ul.navbar-nav {
       align-items: center;
     }
   }
@@ -94,10 +96,10 @@ padding-right: 48px;
 
 @media screen and (max-width: 450px) {
 
-  a.img-logo{
+  a.img-logo {
     display: none;
   }
-  nav{
+  nav {
     padding: 11px 16px 11px 16px;
   }
 }

@@ -1,16 +1,60 @@
 .contact{
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-  color:rgba(255, 255, 255, 0.918);
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  article{
+  .container{
+    display: flex;
+    justify-content: center;
+    padding:0px;
+    margin-top: 20px;
+    max-width:900px;
+    box-shadow: 0px 7px 13px 0px rgba(0,0,0,0.5);
+
+
+  .data{
     background-image: url('../../assets/contact3.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    padding: 80px 42px 80px 42px;
+    color:rgba(255, 255, 255, 0.918);
+    flex:1;
+  }
+
+  .form-container{
+    flex:1;
+    font-size: 0.9em;
+    h4{
+      margin-bottom:3rem;
+    }
+
+    label{
+      margin: 0px;
+    }
+
+    input{
+      border:0px;
+      border-bottom: 1px solid rgb(204, 204, 204);
+      border-radius: 0px;
+    }
+
+    .group-name{
+      display:flex;
+      justify-content: space-evenly;
+    }
+
+    textarea{
+      resize: none;
+      font-size: 0.8em;
+      border:0px;
+      border-bottom: 1px solid rgb(204, 204, 204);
+      border-radius: 0px;
+    }
+  }
+
+  section{
+    padding: 40px 22px 20px 22px;
     display: flex;
     flex-direction: column;
 
@@ -32,6 +76,18 @@
           font-size: 0.9em;
         }
       }
+    }
+  }
+}
+}
+
+@media screen and (max-width: 980px) {
+
+  .container{
+    flex-direction: column;
+
+    .data{
+      align-items: center;
     }
   }
 }

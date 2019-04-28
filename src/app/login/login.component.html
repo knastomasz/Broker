@@ -7,33 +7,45 @@
     <p class="divider-text">
       <span class="bg-light">lub</span>
     </p>
-    <form>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
       <div class="form-group input-group">
         <div class="input-group-prepend">
           <span class="input-group-text"> <i class="fa fa-user"></i> </span>
         </div>
-        <input name="" class="form-control" type="text">
+        <input name="name" formControlName="name" placeholder="imie i nazwisko" class="form-control" type="text">
+        <span class="icon-error" *ngIf="registerForm.get('name').invalid && registerForm.get('name').dirty"><i class="fas fa-exclamation"></i></span>
       </div> <!-- form-group// -->
       <div class="form-group input-group">
         <div class="input-group-prepend">
           <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
         </div>
-        <input name="" class="form-control" type="email">
+        <input name="email" formControlName="email" placeholder="email" class="form-control" type="email">
+        <span class="icon-error" *ngIf="registerForm.get('email').invalid && registerForm.get('email').dirty"><i class="fas fa-exclamation"></i></span>
       </div> <!-- form-group// -->
       <div class="form-group input-group">
         <div class="input-group-prepend">
           <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
         </div>
-        <input name="" class="form-control" type="tel">
+        <input name="phone" formControlName="phone" placeholder="tel" class="form-control" type="tel">
+        <span class="icon-error" *ngIf="registerForm.get('phone').invalid && registerForm.get('phone').dirty"><i class="fas fa-exclamation"></i></span>
       </div> <!-- form-group// -->
       <div class="form-group input-group">
         <div class="input-group-prepend">
           <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
         </div>
-        <input class="form-control" type="password">
+        <input class="form-control" formControlName="password" placeholder="hasło" type="password">
+        <span class="icon-error" *ngIf="registerForm.get('password').invalid && registerForm.get('password').dirty"><i class="fas fa-exclamation"></i></span>
+      </div> <!-- form-group// -->
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-lock"></i></span>
+        </div>
+        <input class="form-control" formControlName="confirmPassword" placeholder="powtórz hasło" type="password">
+        <span class="icon-error" *ngIf="registerForm.get('confirmPassword').invalid && registerForm.get('confirmPassword').dirty"><i class="fa fas-exclamation"></i></span>
+
       </div> <!-- form-group// -->
       <div class="form-group">
-        <button type="submit" class="btn btn-primary btn-block"> Utwórz konto </button>
+        <button type="submit" [disabled]="registerForm.invalid" class="btn btn-primary btn-block"> Utwórz konto </button>
       </div> <!-- form-group// -->
       <p class="text-center">Masz konto ? <a href="">Zaloguj się</a> </p>
     </form>

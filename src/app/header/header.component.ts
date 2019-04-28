@@ -17,9 +17,9 @@ export class HeaderComponent implements OnInit {
 
   onLogin(): void {
     const dialogConfig = new MatDialogConfig();
+    dialogConfig.hasBackdrop = true;
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
-    dialogConfig.hasBackdrop = true;
     dialogConfig.width = '500px';
     const dialogRef = this.dialog.open(LoginComponent, dialogConfig);
     dialogRef.afterClosed().subscribe(result => {

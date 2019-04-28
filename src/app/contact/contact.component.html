@@ -51,6 +51,7 @@
         </div> <!-- form-group// -->
         <div class="form-group">
           <button type="submit" [disabled]="contactForm.invalid" class="btn btn-primary btn-block"> Wyślij </button>
+          <p *ngIf="sendMessage">Wysłano wiadomość</p>
         </div> <!-- form-group// -->
       </form>
     </section>
